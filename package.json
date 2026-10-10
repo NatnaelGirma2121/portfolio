@@ -8,6 +8,8 @@
     "dev:web": "vite",
     "dev:api": "node --watch server/index.js",
     "build": "vite build",
+    "build:static": "vite build --mode static",
+    "export": "node scripts/export-static.js",
     "start": "node server/index.js"
   },
   "dependencies": {

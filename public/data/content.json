@@ -1,0 +1,236 @@
+{
+  "profile": {
+    "name": "Natnael girma",
+    "title": "Computer Engineer",
+    "intro": "I design, build and ship web products from database to interface. My work centres on React, Node.js and cloud infrastructure, with a focus on speed, accessibility and code a team can maintain.",
+    "email": "girman210@gmail.com",
+    "phone": "+251994376044",
+    "avatar": "/uploads/dc20e9a4-259d-4540-b1ec-f65176c71527.jpg",
+    "resume": "",
+    "location": {
+      "label": "hawassa,Ethiopia",
+      "lat": 7.06205,
+      "lon": 38.47635
+    },
+    "socials": {
+      "github": "https://github.com/NatnaelGirma2121",
+      "linkedin": "https://linkedin.com/in/yourname",
+      "twitter": "https://x.com/yourname"
+    },
+    "about": {
+      "bio": [
+        "I am Natnael Girma, an Electrical and Computer Engineering student at Hawassa University, Ethiopia, passionate about AI, software engineering, cybersecurity, and innovative technology. I enjoy building solutions that combine intelligent software with engineering to solve real-world problems. Through projects such as VoiceBridge Vision and ElectraAI, I aim to develop practical technologies that improve accessibility, efficiency, and everyday life. I am committed to continuous learning, discipline, faith, and personal growth as I work toward becoming an accomplished engineer, entrepreneur, and technology innovator."
+      ],
+      "goals": "I am looking to lead product engineering on a team that values craft, and to keep growing in system design, developer experience and applied AI.",
+      "interests": [
+        "Open source",
+        "Design systems",
+        "Performance",
+        "Developer tooling",
+        "Mentoring"
+      ],
+      "strengths": [
+        "Owns features end to end, from schema to UI",
+        "Writes clear docs and reviews that unblock teammates",
+        "Cuts load times and cloud costs with measured changes"
+      ],
+      "stats": []
+    }
+  },
+  "projects": [
+    {
+      "id": "b7d1c5f5-3ce5-40fb-bb98-91627bfc6e0c",
+      "title": "ElectraAI",
+      "description": "ElectraAI is your planned computer engineering project: an intelligent platform that combines Artificial Intelligence, electrical engineering calculations, circuit simulation, and IoT monitoring into one system.",
+      "tags": [
+        "Next.js or React",
+        "Python + FastAPI",
+        "PostgreSQL",
+        "JWT + role-based access"
+      ],
+      "github": "https://github.com/NatnaelGirma2121/electraai",
+      "demo": "https://electraai-kappa.vercel.app/",
+      "images": [
+        "/uploads/123426da-8bc6-4239-8df8-b7bfe6b379d2.png"
+      ],
+      "video": "/uploads/0983c9c8-fc67-435c-81ae-4bb4b3a61b33.mp4",
+      "createdAt": "2026-10-09T13:52:00.599Z"
+    },
+    {
+      "id": "5e7f26f0-f0f6-4823-b298-7445e1172b68",
+      "title": "campusAI",
+      "description": "CampusAI is your project for building an AI-powered university assistant that helps students access academic information, ask questions, and navigate university services through a web application.",
+      "tags": [
+        "Next.js or React",
+        "Python + FastAPI",
+        "PostgreSQL",
+        "JWT + role-based access",
+        "OpenAI API"
+      ],
+      "github": "https://github.com/NatnaelGirma2121/campusai",
+      "demo": "https://campusai-lime.vercel.app/",
+      "images": [
+        "/uploads/6eef16f2-dc84-44cc-866c-c0f126db9f72.png"
+      ],
+      "video": "/uploads/6404649f-74b6-445c-a951-45314d7433c0.mp4",
+      "createdAt": "2026-10-09T14:04:00.947Z"
+    }
+  ],
+  "skills": [
+    {
+      "id": "825df7c7-735d-48e7-9920-f213e2fb541a",
+      "category": "Tools & Technologies",
+      "name": "Git",
+      "level": null,
+      "createdAt": "2026-10-08T17:08:20.708Z"
+    },
+    {
+      "id": "f767e5b2-e73f-481a-b767-068b1f3eb27b",
+      "category": "Tools & Technologies",
+      "name": "GitHub Actions",
+      "level": null,
+      "createdAt": "2026-10-08T17:08:20.708Z"
+    },
+    {
+      "id": "6b00db3c-e202-47ba-9c33-1784ac274f89",
+      "category": "backend",
+      "name": "python",
+      "level": 78,
+      "createdAt": "2026-10-09T19:15:41.515Z"
+    },
+    {
+      "id": "52a1192a-bd9b-472c-a4e2-4691567d6c04",
+      "category": "frontend",
+      "name": "html",
+      "level": 89,
+      "createdAt": "2026-10-09T19:16:10.225Z"
+    },
+    {
+      "id": "222416cf-8952-4152-973e-df52c6ae9681",
+      "category": "frontend",
+      "name": "css",
+      "level": 85,
+      "createdAt": "2026-10-09T19:16:28.935Z"
+    },
+    {
+      "id": "9bbf7373-02d0-4f2a-b6ed-e5d08b1d3066",
+      "category": "frontend",
+      "name": "javascript",
+      "level": 80,
+      "createdAt": "2026-10-09T19:16:50.527Z"
+    },
+    {
+      "id": "b52b91d9-20ee-46cc-9325-55b6b1239169",
+      "category": "object oriented programming",
+      "name": "c++",
+      "level": 85,
+      "createdAt": "2026-10-09T19:17:10.555Z"
+    },
+    {
+      "id": "84166247-ebbe-441d-a30d-833aaf169320",
+      "category": "object oriented programming",
+      "name": "java",
+      "level": 89,
+      "createdAt": "2026-10-09T19:17:39.763Z"
+    },
+    {
+      "id": "bd55f1a3-1151-4ddb-a4d7-5d8d52822080",
+      "category": "Tools & Technologies",
+      "name": "networking",
+      "level": 80,
+      "createdAt": "2026-10-09T19:18:03.019Z"
+    },
+    {
+      "id": "7c02d052-3e9d-47d9-8a19-b867d3a7146b",
+      "category": "Tools & Technologies",
+      "name": "Machine learning",
+      "level": 82,
+      "createdAt": "2026-10-09T19:18:47.602Z"
+    }
+  ],
+  "certificates": [],
+  "experience": [
+    {
+      "id": "8cb32797-aaa3-4b25-852b-094db5bdf5d8",
+      "type": "work",
+      "title": "developer",
+      "org": "Hawassa university",
+      "period": "2026",
+      "summary": "",
+      "details": [],
+      "createdAt": "2026-10-09T19:37:47.549Z"
+    },
+    {
+      "id": "11b950a0-4f57-438d-97e4-f3c1f7d8bbe9",
+      "type": "work",
+      "title": "cybersecurity",
+      "org": "cisco",
+      "period": "2026",
+      "summary": "",
+      "details": [],
+      "createdAt": "2026-10-09T19:37:47.552Z"
+    },
+    {
+      "id": "15bca80c-52a6-4881-b2b3-7205bd9b7045",
+      "type": "work",
+      "title": "computer Engineering Intern",
+      "org": "",
+      "period": "2026",
+      "summary": "Built internal dashboards and fixed production bugs.",
+      "details": [
+        "Shipped an admin dashboard that replaced a manual spreadsheet workflow."
+      ],
+      "createdAt": "2026-10-09T19:37:47.552Z"
+    },
+    {
+      "id": "e7b0d580-0747-4c86-a603-f17d537b060c",
+      "type": "education",
+      "title": "B.Sc. Electrical and Computer",
+      "org": "Hawassa university",
+      "period": "2022-2027",
+      "summary": "",
+      "details": [
+        "Capstone: real-time collaborative editor built with CRDTs."
+      ],
+      "createdAt": "2026-10-09T19:37:47.552Z"
+    }
+  ],
+  "services": [
+    {
+      "id": "250181e4-db86-4273-9a42-df65536dd62b",
+      "icon": "PenTool",
+      "title": "UI/UX Design",
+      "text": "Wireframes, prototypes and design systems that look sharp and are easy to use.",
+      "createdAt": "2026-10-09T19:37:47.552Z"
+    },
+    {
+      "id": "faef6dca-29e6-4c84-8470-99eabc5a10c2",
+      "icon": "Code2",
+      "title": "Web Development",
+      "text": "Fast, accessible websites and web apps built with React and modern tooling, ready to scale.",
+      "createdAt": "2026-10-09T19:37:47.552Z"
+    },
+    {
+      "id": "523ee31e-d3c1-404f-8303-8f1526d2e2a5",
+      "icon": "Webhook",
+      "title": "API Development",
+      "text": "Secure REST and GraphQL APIs with clear documentation, testing and monitoring.",
+      "createdAt": "2026-10-09T19:37:47.552Z"
+    },
+    {
+      "id": "92e9cdbb-1b7f-43a9-9e34-4237b9765593",
+      "icon": "Lightbulb",
+      "title": "Consulting",
+      "text": "Architecture reviews, performance audits and technical roadmaps for your team.",
+      "createdAt": "2026-10-09T19:37:47.552Z"
+    },
+    {
+      "id": "e757b9db-7d35-4dae-8d4b-8bb99de5ea1f",
+      "icon": "Wrench",
+      "title": "Networking",
+      "text": "solving problems, and even build a career or start a business. Networking is useful because almost every organization, school, business, and home depends on computers and internet connections.",
+      "createdAt": "2026-10-09T20:09:09.716Z"
+    }
+  ],
+  "testimonials": []
+}

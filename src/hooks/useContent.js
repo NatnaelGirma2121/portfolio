@@ -3,10 +3,39 @@ import { about, certificates, profile, projects, services, skills, testimonials,
 import { request } from '../lib/api'
 import groupSkills from '../lib/groupSkills'
 
+// VITE_STATIC=true (see .env.static) builds the site for static hosts such as Vercel.
+// It reads /data/content.json, created by `npm run export`, instead of calling the API.
+export const STATIC = import.meta.env.VITE_STATIC === 'true'
+
 const normalize = (list) =>
   list.map((p) => ({ ...p, images: p.images ?? (p.image ? [p.image] : []), video: p.video ?? '' }))
 
-// Starts with the static content so the page renders instantly, then swaps in live data from the API.
+const shape = (d) => ({
+  projects: normalize(d.projects),
+  skills: groupSkills(d.skills),
+  certificates: d.certificates,
+  profile: d.profile,
+  about: d.profile.about,
+  experience: d.experience,
+  services: d.services,
+  testimonials: d.testimonials,
+})
+
+async function fetchLive() {
+  const [projects, skills, certificates, profile, experience, services, testimonials] = await Promise.all([
+    request('/projects'), request('/skills'), request('/certificates'), request('/profile'),
+    request('/experience'), request('/services'), request('/testimonials'),
+  ])
+  return { projects, skills, certificates, profile, experience, services, testimonials }
+}
+
+async function fetchStatic() {
+  const res = await fetch('/data/content.json')
+  if (!res.ok) throw new Error('No exported content')
+  return res.json()
+}
+
+// Starts with the built-in content so the page renders instantly, then swaps in the real data.
 export default function useContent() {
   const [data, setData] = useState({
     projects: normalize(projects),
@@ -21,13 +50,12 @@ export default function useContent() {
 
   useEffect(() => {
     let off = false
-    Promise.all([request('/projects'), request('/skills'), request('/certificates'), request('/profile'),
-      request('/experience'), request('/services'), request('/testimonials')])
-      .then(([p, s, c, pr, ex, sv, te]) => {
-        if (!off) setData({ projects: normalize(p), skills: groupSkills(s), certificates: c, profile: pr, about: pr.about, experience: ex, services: sv, testimonials: te })
+    ;(STATIC ? fetchStatic() : fetchLive())
+      .then((d) => {
+        if (!off) setData(shape(d))
       })
       .catch(() => {
-        /* API offline: keep the static content */
+        /* keep the built-in content */
       })
     return () => {
       off = true

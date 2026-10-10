@@ -3,7 +3,9 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import seed from './seed.js'
 
-const dir = path.join(path.dirname(fileURLToPath(import.meta.url)), 'data')
+// DATA_DIR lets a host store data on a persistent disk. Default: the server folder.
+const base = process.env.DATA_DIR || path.dirname(fileURLToPath(import.meta.url))
+const dir = path.join(base, 'data')
 const FILE = path.join(dir, 'db.json')
 let cache
 

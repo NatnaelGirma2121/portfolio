@@ -35,3 +35,23 @@ npm start                # serves the site, API and uploads together on http://l
 | POST | /api/experience, /api/services, /api/testimonials (/:id/move) | yes |
 
 Everything on the page can now be edited from `/admin`. `src/data/content.js` only holds the fallback shown if the API is offline.
+
+## Deploy
+This app needs a host that runs Node and keeps files on a **persistent disk** (Render, Railway, Fly.io or a VPS).
+Static hosts such as Vercel, Netlify or GitHub Pages will not work: uploads and edits would be lost.
+
+- Build command: `npm install --include=dev && npm run build`
+- Start command: `npm start`
+- Environment variables: `ADMIN_PASSWORD`, `JWT_SECRET`, and `DATA_DIR` set to the disk's mount path (e.g. `/var/data`).
+- Open `https://your-site/admin` to edit.
+
+## Free static deploy (Vercel, Netlify, GitHub Pages)
+The admin needs a server, which static hosts do not have. Instead, edit locally and publish a snapshot:
+
+1. `npm run dev`, then edit everything in http://localhost:5173/admin
+2. `npm run export` (writes `public/data/content.json` and copies uploads to `public/uploads`)
+3. `git add -A && git commit -m "Update content" && git push`
+4. Vercel rebuilds automatically (`vercel.json` already sets the build command).
+
+The static build (`npm run build:static`) reads the exported file and has no `/admin`.
+Keep each uploaded file under 100 MB (GitHub's limit); compress videos.

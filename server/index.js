@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url'
 import { load, save } from './db.js'
 
 const root = path.dirname(fileURLToPath(import.meta.url))
-const UPLOADS = path.join(root, 'uploads')
+const UPLOADS = path.join(process.env.DATA_DIR || root, 'uploads')
 const DIST = path.join(root, '..', 'dist')
 const PORT = process.env.PORT || 5000
 const { ADMIN_PASSWORD, JWT_SECRET } = process.env
@@ -22,6 +22,7 @@ fs.mkdirSync(UPLOADS, { recursive: true })
 
 const app = express()
 app.disable('x-powered-by')
+app.set('trust proxy', 1) // behind a host's proxy, req.ip is the visitor (keeps the login limiter fair)
 app.use(express.json({ limit: '100kb' }))
 
 /* ---------- uploads ---------- */
