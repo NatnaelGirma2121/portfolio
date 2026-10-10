@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 250 250 247;
+  --fg: 24 24 20;
+  --muted: 107 105 98;
+  --card: 255 255 255;
+  --line: 230 229 222;
+  --accent: 4 120 87;
+  --accent2: 77 124 15;
+  --shadow: 90 80 50;
+}
+
+.dark {
+  --bg: 14 14 12;
+  --fg: 240 240 235;
+  --muted: 160 158 150;
+  --card: 28 28 24;
+  --line: 56 56 50;
+  --accent: 52 211 153;
+  --accent2: 163 230 53;
+  --shadow: 0 0 0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+    background-image:
+      radial-gradient(60rem 40rem at 85% -10%, rgb(var(--accent) / 0.09), transparent 60%),
+      radial-gradient(50rem 36rem at -10% 30%, rgb(var(--accent2) / 0.07), transparent 60%);
+    background-attachment: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  h1, h2, h3 {
+    font-weight: 600;
+    @apply font-display tracking-tight;
+  }
+  ::selection {
+    background: rgb(var(--accent) / 0.3);
+  }
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+}
+
+@layer components {
+  .glass {
+    @apply border border-line/70 bg-card/60 shadow-glass backdrop-blur-xl;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition duration-200 active:scale-[0.97];
+  }
+  .btn-primary {
+    @apply btn text-white shadow-lg shadow-accent/30 hover:brightness-110;
+    background-image: linear-gradient(135deg, rgb(var(--accent)), rgb(var(--accent2)));
+  }
+  .btn-ghost {
+    @apply btn glass hover:border-accent/60 hover:text-accent;
+  }
+  .gradient-text {
+    background-image: linear-gradient(120deg, rgb(var(--accent)), rgb(var(--accent2)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+  .chip {
+    @apply rounded-full border border-line/80 bg-bg/60 px-3 py-1 text-xs font-medium text-muted;
+  }
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Full-Stack Developer</title>
+    <meta name="description" content="Your Name is a full-stack developer who builds fast, accessible web apps with React, Node.js and cloud infrastructure. View projects and get in touch." />
+    <meta name="author" content="Your Name" />
+    <link rel="canonical" href="https://your-domain.com/" />
+    <meta name="theme-color" content="#fafaf7" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your Name | Full-Stack Developer" />
+    <meta property="og:description" content="Fast, accessible web apps built with React, Node.js and the cloud." />
+    <meta property="og:image" content="https://your-domain.com/images/og.png" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Your Name",
+        "jobTitle": "Full-Stack Developer",
+        "url": "https://your-domain.com/",
+        "sameAs": ["https://github.com/yourname", "https://linkedin.com/in/yourname"]
+      }
+    </script>
+
+    <!-- Apply the saved theme before first paint to avoid a flash -->
+    <script>
+      try {
+        var t = localStorage.getItem('theme-v2');
+        if (!t) t = 'light';
+        document.documentElement.classList.toggle('dark', t === 'dark');
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>This portfolio needs JavaScript to run. Contact: hello@your-domain.com</noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
